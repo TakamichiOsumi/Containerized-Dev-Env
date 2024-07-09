@@ -1,3 +1,3 @@
-# dockerfiles
+# dockerfiles (Work in progress)
 
-Create and maintain a handy and ready-to-use container image to develop PostgreSQL.
+Making a handy and ready-to-use container image to develop PostgreSQL.

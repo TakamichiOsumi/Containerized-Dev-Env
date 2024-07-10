@@ -13,9 +13,10 @@ $ docker build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/workspace/guest_shared -it dev-pg-image bash
 ```
 
-Exiting the container stops the running container. To reconnect to the container, run the below command.
+Exiting the container stops the running container. To reconnect to the container, run the below commands.
 ```console
-$ docker container start dev-pg-container -a
+$ docker container start dev-pg-container
+$ docker container attach dev-pg-container
 ```
 
 ## Notes

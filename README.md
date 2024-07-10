@@ -1,4 +1,4 @@
-# dockerfiles (Work in progress)
+# dockerfiles
 
 Making a handy and ready-to-use container image to develop PostgreSQL for hobby projects.
 
@@ -15,8 +15,7 @@ $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"
 
 Exiting the container stops the running container. To reconnect to the container, run the below commands.
 ```console
-$ docker container start dev-pg-container
-$ docker container attach dev-pg-container
+$ docker container start -a dev-pg-container
 ```
 
 ## Notes

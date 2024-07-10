@@ -7,8 +7,8 @@ Making a handy and ready-to-use container image to develop PostgreSQL for hobby 
 Create and connect to the container of the development environment.
 
 ```console
-$ git clone https://github.com/TakamichiOsumi/dockerfiles.git
-$ cd dockerfiles
+$ git clone https://github.com/TakamichiOsumi/ContainerizedDevEnv.git
+$ cd ContainerizedDevEnv
 $ docker build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/workspace/guest_shared -it dev-pg-image bash
 ```

@@ -2,7 +2,7 @@
 
 Making a handy and ready-to-use container image to develop PostgreSQL for hobby projects.
 
-# How to use
+## How to use
 
 Create and connect to the container of the development environment.
 

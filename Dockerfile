@@ -12,4 +12,4 @@ RUN apt -y install git=1:2.43.0-1ubuntu7.1 \
 		   libicu-dev=74.2-1ubuntu3 \
 		   pkgconf=1.8.1-2build1
 
-WORKDIR /workspace
+WORKDIR /workspace/guest_shared

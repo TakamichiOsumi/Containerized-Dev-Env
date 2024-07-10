@@ -15,7 +15,8 @@ $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"
 
 Exiting the container stops the running container. To reconnect to the container, run the below commands.
 ```console
-$ docker container start -a dev-pg-container
+$ docker container start dev-pg-container
+$ docker container attach dev-pg-container
 ```
 
 ## Notes

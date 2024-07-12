@@ -18,4 +18,4 @@ RUN apt install -y docbook-xml docbook-xsl libxml2-utils xsltproc fop
 RUN useradd -d /home/dev -s /bin/bash dev
 RUN mkdir /home/dev && chown dev /home/dev
 
-WORKDIR /workspace/guest_shared
+WORKDIR /home/dev/guest_shared

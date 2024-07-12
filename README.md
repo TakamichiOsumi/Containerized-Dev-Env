@@ -10,12 +10,12 @@ Making a handy and ready-to-use container image to develop PostgreSQL for hobby 
 $ git clone https://github.com/TakamichiOsumi/ContainerizedDevEnv.git
 $ cd ContainerizedDevEnv
 $ docker image build -t dev-pg-image .
-$ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/workspace/guest_shared -it dev-pg-image bash
+$ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/home/dev/guest_shared -it dev-pg-image bash
 ```
 
 2. Start the development.
 ```console
-# su - dev
+# su dev
 $ git clone git://git.postgresql.org/git/postgresql.git
 $ cd postgresql
 $ ./configure --enable-debug --enable-cassert CFLAGS=-O0 --prefix="$PWD/binary"

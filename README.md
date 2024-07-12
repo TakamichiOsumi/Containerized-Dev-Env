@@ -13,16 +13,26 @@ $ docker image build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/workspace/guest_shared -it dev-pg-image bash
 ```
 
-Exiting the container stops the running container.
+2. Start the development.
+```console
+$ su - dev
+$ git clone git://git.postgresql.org/git/postgresql.git
+$ cd postgresql
+$ ./configure --enable-debug --enable-cassert CFLAGS=-O0 --prefix="$PWD/binary"
+$ make -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make.log
+$ make check-world -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make_check_world.log
+```
 
-2. Reconnect to the container after restarting the env.
+Exiting from the container, in short, from the development environment, stops the running container.
+
+3. Restart and reconnect to the container.
 
 ```console
 $ docker container start dev-pg-container
 $ docker container attach dev-pg-container
 ```
 
-3. Clean up.
+4. Clean up.
 
 Make sure the state of the container is exited.
 

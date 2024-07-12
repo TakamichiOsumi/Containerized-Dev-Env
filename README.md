@@ -29,16 +29,22 @@ $ cpan -v
 $ cpan install IPC::Run Test::Simple Time::HiRest Test::Harness
 ```
 
+3. Build the documentation.
+```console
+$ cd doc/src/sgml
+$ make html
+```
+
 Exiting from the container, in short, from the development environment, stops the running container.
 
-3. Restart and reconnect to the container.
+4. Restart and reconnect to the container.
 
 ```console
 $ docker container start dev-pg-container
 $ docker container attach dev-pg-container
 ```
 
-4. Clean up.
+5. Clean up.
 
 Make sure the state of the container is exited.
 

@@ -10,8 +10,6 @@ RUN apt -y install git=1:2.43.0-1ubuntu7.1 \
 		   curl=8.5.0-2ubuntu10.1 \
 		   libicu-dev=74.2-1ubuntu3 \
 		   pkgconf=1.8.1-2build1
-# RUN apt -y install libxml2-utils
-# RUN apt -y install emacs
 
 # Build documents.
 RUN apt install -y docbook-xml docbook-xsl libxml2-utils xsltproc fop

@@ -15,7 +15,7 @@ $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"
 
 2. Start the development.
 ```console
-$ su - dev
+# su - dev
 $ git clone git://git.postgresql.org/git/postgresql.git
 $ cd postgresql
 $ ./configure --enable-debug --enable-cassert CFLAGS=-O0 --prefix="$PWD/binary"
@@ -25,8 +25,8 @@ $ make check-world -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make_check
 
 Note : Executing TAP tests requires perl modules installation. Reconfigure with `--enable-tap-tests` option and reperform the build and tests.
 ```console
-$ cpan -v
-$ cpan install IPC::Run Test::Simple Time::HiRest Test::Harness
+# cpan -v
+# cpan install IPC::Run Test::Simple Time::HiRest Test::Harness
 ```
 
 3. Build the documentation.

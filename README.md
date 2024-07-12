@@ -13,7 +13,7 @@ $ docker image build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/home/dev/guest_shared -it dev-pg-image bash
 ```
 
-2. Start the development.
+2. Test run of the development environment.
 ```console
 # su dev
 $ git clone git://git.postgresql.org/git/postgresql.git
@@ -55,4 +55,6 @@ $ docker image rm dev-pg-image
 
 ## Notes
 
-The directory 'host_shared' in the host directory is the shared directory whose mount point is the '/workspace/guest_shared' on the container.
+The directory 'host_shared' in the host directory is the shared directory whose mount point is the '/home/dev/guest_shared' on the container.
+
+The commit id of the cloned PostgreSQL points to the latest HEAD and thus regression tests can fail depending on the timing.

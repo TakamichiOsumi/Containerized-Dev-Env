@@ -23,7 +23,7 @@ $ make -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make.log
 $ make check-world -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make_check_world.log
 ```
 
-Note : Executing TAP tests requires perl modules installation. Reconfigure with --enable-tap-tests option and reperform the build and tests.
+Note : Executing TAP tests requires perl modules installation. Reconfigure with `--enable-tap-tests` option and reperform the build and tests.
 ```console
 $ cpan -v
 $ cpan install IPC::Run Test::Simple Time::HiRest Test::Harness

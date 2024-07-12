@@ -23,6 +23,12 @@ $ make -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make.log
 $ make check-world -j `cat /proc/cpuinfo | grep processor | wc -l` 2> make_check_world.log
 ```
 
+Note : Executing TAP tests requires perl modules installation. Reconfigure with --enable-tap-tests option and reperform the build and tests.
+```console
+$ cpan -v
+$ cpan install IPC::Run Test::Simple Time::HiRest Test::Harness
+```
+
 Exiting from the container, in short, from the development environment, stops the running container.
 
 3. Restart and reconnect to the container.

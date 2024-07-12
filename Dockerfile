@@ -21,11 +21,3 @@ RUN useradd -d /home/dev -s /bin/bash dev
 RUN mkdir /home/dev && chown dev /home/dev
 
 WORKDIR /workspace/guest_shared
-
-# Notes :
-# cpan -v # Answer yes.
-# cpan install IPC::Run Test::Simple Time::HiRest Test::Harness
-
-# git clone PG_SRC
-# cd PG_SRC
-# ./configure --enable-debug --enable-cassert --enable-tap-tests --without-icu CFLAGS=-O0 --prefix="$PWD/binary"

@@ -13,7 +13,7 @@ $ docker image build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/home/dev/guest_shared -it dev-pg-image bash
 ```
 
-2. Test the development environment.
+2. Test the basic flow of development environment.
 
 ```console
 # su dev

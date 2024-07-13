@@ -1,4 +1,4 @@
-# ContainerizedDevEnv
+# Containerized-Dev-Env
 
 Making a handy and ready-to-use container image to develop PostgreSQL HEAD for hobby projects.
 
@@ -7,8 +7,8 @@ Making a handy and ready-to-use container image to develop PostgreSQL HEAD for h
 1. Create and connect to the container.
 
 ```console
-$ git clone https://github.com/TakamichiOsumi/ContainerizedDevEnv.git
-$ cd ContainerizedDevEnv
+$ git clone https://github.com/TakamichiOsumi/Containerized-Dev-Env.git
+$ cd Containerized-Dev-Env
 $ docker image build -t dev-pg-image .
 $ docker container run --name dev-pg-container --mount type=bind,source="$(pwd)"/host_shared,target=/home/dev/guest_shared -it dev-pg-image bash
 ```
